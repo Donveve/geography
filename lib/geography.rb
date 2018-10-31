@@ -1,5 +1,6 @@
-require "geography/version"
+require 'open-uri'
+require 'nokogiri'
 
-module Geography
-  # Your code goes here...
-end
+require_relative "./geography/version"
+require_relative "./geography/cli"
+require_relative "./geography/sell"
