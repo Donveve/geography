@@ -10,10 +10,8 @@ class Geography::CLI
     puts "Number of countries per continent"
     puts ""
     @sell = Geography::Sell.right_now
-    # @sell.each.with_index(1) do |sell, i|
-      # puts "#{i}. #{sell.name} - - #{sell.availability}"
+end
 
-  end
   def list
     input = nil
 
@@ -56,10 +54,11 @@ class Geography::CLI
       puts "#{@sell[0].name5}"
       puts "-------------------------"
     else
-      puts "Please choose one continent"
-      puts "-------------------------"
+
     end
+
     end
+
     def bye
       puts "See you next"
      end

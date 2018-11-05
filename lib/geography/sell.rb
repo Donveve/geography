@@ -7,12 +7,11 @@ class Geography::Sell
 
     def self.scrape_sell
         sell = []
-        # sell << self.scrape_allmenus
-        sell << self.scrape_agavijuice
+        sell << self.scrape_sciencetrends
         sell
     end
 
-        def self.scrape_agavijuice
+        def self.scrape_sciencetrends
         doc = Nokogiri::HTML(open("https://sciencetrends.com/many-countries-can-name-world/"))
         sells = self.new
         sells.name = doc.css("h2")[1].text.strip
