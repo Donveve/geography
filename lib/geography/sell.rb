@@ -15,12 +15,12 @@ class Geography::Sell
         def self.scrape_agavijuice
         doc = Nokogiri::HTML(open("https://sciencetrends.com/many-countries-can-name-world/"))
         sells = self.new
-        sells.name = doc.css("h2#ftoc-heading-2").text.strip
-        sells.name1 = doc.css("h2#ftoc-heading-3").text.strip
-        sells.name2 = doc.css("h2#ftoc-heading-4").text.strip
-        sells.name3 = doc.css("h2#ftoc-heading-5").text.strip
-        sells.name4 = doc.css("h2#ftoc-heading-6").text.strip
-        sells.name5 = doc.css("h2#ftoc-heading-7").text.strip
+        sells.name = doc.css("h2")[1].text.strip
+        sells.name1 = doc.css("h2")[2].text.strip
+        sells.name2 = doc.css("h2")[3].text.strip
+        sells.name3 = doc.css("h2")[4].text.strip
+        sells.name4 = doc.css("h2")[5].text.strip
+        sells.name5 = doc.css("h2")[6].text.strip
         sells
       end
     end
