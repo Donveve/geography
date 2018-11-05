@@ -55,8 +55,10 @@ class Geography::CLI
       when "6"
       puts "#{@sell[0].name5}"
       puts "-------------------------"
-
-      end
+    else
+      puts "Please choose one continent"
+      puts "-------------------------"
+    end
     end
     def bye
       puts "See you next"
